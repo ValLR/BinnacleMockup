@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import pivotalData from '../data/mock.json'
-console.log(pivotalData.projects[0].name);
-console.log(pivotalData.projects[0].epics[2].name)
-console.log(pivotalData.projects[0].epics[0].stories[0].state)
+import pivotalData from '../data/pivmock.json';
+console.log(
+	pivotalData.data[0].projects[0].canonicalName,
+	pivotalData.data[0].projects[0].stories[0],
+	pivotalData.data[0].projects[0].stories[1],
+	pivotalData.data[0].projects[0].stories[2]);
+console.log(
+	pivotalData.data[0].projects[1].canonicalName,
+	pivotalData.data[0].projects[1].stories[0],
+	pivotalData.data[0].projects[1].stories[1],
+	pivotalData.data[0].projects[1].stories[2]);
 
 class App extends Component {
   render() {
@@ -13,34 +20,60 @@ class App extends Component {
 }
 
 class BinnaclePage extends Component {
-/*	constructor(props){
-		super(props);
-		this.state ={
-			items:[]
-		}
-	}
-*/
-	render(){
+
+	render() {
+
 		return(
-			<div className='container'>
-				<h1 className='text-center'>Proyectos</h1>
-				<div className='row'>
-					{pivotalData.projects.map((project, index) =>
-					<ProjectList key={index} name={project.name} url={project.url}/>
-					)}
-				</div>
-			</div>
+			pivotalData.data[0].projects.map((project) =>
+				<BinnacleTable projectTitle={project.canonicalName} project={project} />
+			)
 		)
 	}
 }
 
-class ProjectList extends Component {
-	render(){
+
+class BinnacleTable extends Component {
+	
+/*	render() {
+
 		return(
-			<a className='col-sm col-md col-lg' href={this.props.url}>{this.props.name}</a>
+			<div>
+				<ProjectTable projectTitle={this.props.project.name} project={this.props.project}/>
+			</div>
+		)
+	}
+*/
+	render() {
+		return(
+			this.props.project.stories.map((story) =>
+				<StoryRow epic={story.epic} id={story.id} pivState={story.state} points={story.points} project={this.props.project} />
+			)
 		)
 	}
 
+}
+
+
+class StoryRow extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			points:0,
+		}
+	}
+	componentDidMount() {
+		this.setState({
+			points:this.props.points,
+		})
+	}
+
+	render() {
+		return(
+			<div>
+				{this.state.points+' '+this.props.epic +' '+this.props.id+' '+this.props.pivState+' '+this.props.points} 
+			</div>			
+		)
+	}
 }
 
 export default App;

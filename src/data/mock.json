@@ -14,16 +14,6 @@
               "points":0
             },
             {
-              "name":"story 2",
-              "state":"unstarted",
-              "points":8
-            },
-            {
-              "name":"story 3",
-              "state":"started",
-              "points":1
-            },
-            {
               "name":"story 4",
               "state":"unscheduled",
               "points":0
@@ -42,21 +32,6 @@
               "name":"story 2",
               "state":"unstarted",
               "points":2
-            },
-            {
-              "name":"story 3",
-              "state":"unscheduled",
-              "points":1
-            },
-            {
-              "name":"story 4",
-              "state":"unscheduled",
-              "points":8
-            },
-            {
-              "name":"story 5",
-              "state":"started",
-              "points":2
             }
           ]
         },
@@ -72,16 +47,6 @@
               "name":"story 2",
               "state":"unstarted",
               "points":8
-            },
-            {
-              "name":"story 3",
-              "state":"started",
-              "points":1
-            },
-            {
-              "name":"story 4",
-              "state":"unscheduled",
-              "points":0
             },
             {
               "name":"story 5",
@@ -131,34 +96,9 @@
               "points":0
             },
             {
-              "name":"story 3",
-              "state":"unscheduled",
-              "points":2
-            },
-            {
-              "name":"story 4",
-              "state":"unscheduled",
-              "points":4
-            },
-            {
-              "name":"story 5",
-              "state":"started",
-              "points":2
-            },
-            {
               "name":"story 6",
               "state":"unstarted",
               "points":4
-            },
-            {
-              "name":"story 8",
-              "state":"started",
-              "points":8
-            },
-            {
-              "name":"story 9",
-              "state":"unscheduled",
-              "points":2
             }
           ]
         },
@@ -179,16 +119,6 @@
               "name":"story 3",
               "state":"started",
               "points":1
-            },
-            {
-              "name":"story 4",
-              "state":"unscheduled",
-              "points":4
-            },
-            {
-              "name":"story 5",
-              "state":"started",
-              "points":2
             }
           ]
         }
@@ -206,16 +136,6 @@
               "name":"story 1",
               "state":"unscheduled",
               "points":2
-            },
-            {
-              "name":"story 2",
-              "state":"unstarted",
-              "points":8
-            },
-            {
-              "name":"story 3",
-              "state":"started",
-              "points":8
             },
             {
               "name":"story 4",
@@ -243,26 +163,6 @@
               "points":4
             },
             {
-              "name":"story 4",
-              "state":"unscheduled",
-              "points":8
-            },
-            {
-              "name":"story 5",
-              "state":"started",
-              "points":2
-            },
-            {
-              "name":"story 6",
-              "state":"unstarted",
-              "points":4
-            },
-            {
-              "name":"story 8",
-              "state":"started",
-              "points":8
-            },
-            {
               "name":"story 9",
               "state":"unscheduled",
               "points":2
@@ -280,16 +180,6 @@
             {
               "name":"story 2",
               "state":"unstarted",
-              "points":4
-            },
-            {
-              "name":"story 3",
-              "state":"unstarted",
-              "points":1
-            },
-            {
-              "name":"story 4",
-              "state":"unscheduled",
               "points":4
             },
             {
