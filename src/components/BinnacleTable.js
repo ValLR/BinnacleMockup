@@ -8,23 +8,21 @@ class BinnacleTable extends Component {
 		let points = 0;
 
 		return(
-		    <table>
-		    	<thead>
-		    		<tr>
-		        		<th>Proyecto</th>
-		        		<th>Epic</th>
-		        		<th>Estado</th>
-		        		<th>Puntos</th>
-		        	</tr>
-		      	</thead>
-				{pivotalData.data[0].projects.map((project) =>
-					project.stories.map((story) =>
-
-					<StoryRow key={story.id} project={project.canonicalName} epic={story.epic} pivState={story.state} points={story.points} />
-				)
-			)}
-		    </table>
-
+			<div>
+			    <div className="row head">
+			        <div className="col-lg-3 col-md-3 col-sm-3 text-center">Proyecto</div>
+			        <div className="col-lg-3 col-md-3 col-sm-3 text-center">Epic</div>
+			        <div className="col-lg-3 col-md-3 col-sm-3 text-center">Estado</div>
+			        <div className="col-lg-3 col-md-3 col-sm-3 text-center">Puntos</div>
+				</div>
+		      	<div>
+					{pivotalData.data[0].projects.map((project) =>
+						project.stories.map((story) =>
+						<StoryRow  key={story.id} project={project.canonicalName} epic={story.epic} pivState={story.state} points={story.points} />
+					)
+					)}
+				</div>
+			</div>
 		)
 	}
 }

@@ -9,8 +9,11 @@ table {
     width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+.head {
+	background-color: whitesmoke;
+}
+
+.story {
+	background-color:gray;
+	border:1px solid white;
 }
